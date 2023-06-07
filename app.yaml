@@ -1,0 +1,10 @@
+runtime: python39
+entrypoint: gunicorn -b :$PORT main:app
+
+env_variables:
+  # Add any environment variables required by your application
+  VARIABLE_NAME: "batik_class"
+
+automatic_scaling:
+  min_instances: 1
+  max_instances: 5
